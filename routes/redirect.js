@@ -4,16 +4,6 @@ const router = express.Router();
 
 const Url = require("../models/UrlModel");
 
-// router.get("/all", async (req, res, next) => {
-//   const allUrl = Url.find((error, data) => {
-//     if (error) {
-//       return next(error);
-//     } else {
-//       res.json(data);
-//     }
-//   });
-// });
-
 router.get("/all", async (req,res,next)=>{
  const all = await Url.find({})
  if(all){
